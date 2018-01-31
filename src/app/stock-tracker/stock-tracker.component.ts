@@ -9,7 +9,7 @@ import { StockService } from "../stock.service"
 })
 export class StockTrackerComponent implements OnInit {
 
-  allTrackedStocks: [];
+  allTrackedStocks: {}[];
   showAddNewStock: boolean;
   newStockInput: string;
 
