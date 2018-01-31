@@ -1,0 +1,18 @@
+<div class="stock-history-wrapper">
+	<h1 class="page-headline">{{ symbol }} History</h1>
+	<div class="card-wrapper">
+		<div *ngFor="let day of history" 
+			class="stock-card history-card no-hover">
+			<div class="stock-card-headline">
+				<span class="card-date">{{ day.date }}</span>
+				<span class="card-symbol"> - {{ symbol }} </span>
+			</div>
+			<div class="stock-card-body">
+				<p>Open: {{ day.open }}</p>
+				<p>High: {{ day.high }}</p>
+				<p>Low: {{ day.low }}</p>
+				<p>Close: {{ day.close }}</p>
+			</div>
+		</div>
+	</div>
+</div>

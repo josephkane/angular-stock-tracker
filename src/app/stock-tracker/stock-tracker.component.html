@@ -1,0 +1,51 @@
+<div class="stock-tracker-wrapper">
+	<h1 class="page-headline"> My Stocks </h1>
+	<div class="card-wrapper">
+		<div *ngFor="let stock of allTrackedStocks" class="stock-card">
+			<a routerLink="/history/{{ stock.symbol }}">
+				<h4 class="stock-card-headline">{{ stock.symbol }}</h4>
+				<div class="stock-card-body">
+					<p>	
+						<span class="label">Price: </span>
+						<span class="data">{{ stock.price }}</span>
+					</p>
+					<p>
+						<span class="label">Last updated: </span>
+						<span class="data">{{ stock.updated }}</span>
+					</p>
+				</div>
+			</a>
+			<button class="danger-button delete-button"
+					(click)=deleteStock(stock)>
+				Delete</button>
+		</div>
+	</div>
+	<div *ngIf="showAddNewStock" 
+		class="new-stock-bg-wrapper">
+		<div class="new-stock-wrapper">	
+			<h3 class="page-headline new-stock-headline"> Track more stocks: </h3>
+			<div class="new-stock-body">
+				<p class="add-new-stock-instructions">
+					Enter the symbols for the stocks you want to track, separated by commas. Only valid symbols will be accepted.
+				</p>
+				<input [(ngModel)]="newStockInput" 
+					class="new-stock-input" autofocus="true">
+				<div class="new-stock-buttons">
+					<button class="primary-button add-new-stocks-submit"
+							(click)=addAndUpdateStocks(newStockInput)>
+						Submit</button>
+					<button class="danger-button"
+							(click)=toggleAddNewStock()>
+						Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="add-new-stock-button-wrapper">
+		<button *ngIf="!showAddNewStock" 
+				class="primary-button add-new-stock-button" 
+				(click)=toggleAddNewStock()> 
+			Add New Stock
+		</button>
+	</div>
+</div>

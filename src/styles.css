@@ -1,1 +1,99 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	color: #d8e1e5;
+	background-color: #1f263d;
+	font-family: Helvetica, cursive;
+}
+
+button {
+	border: none;
+	border-radius: 5px;
+	font-size: 1.2em;
+}
+
+.danger-button {
+	background-color: #cc324b;
+	color: #d8e1e5;
+}
+
+.danger-button:hover {
+	color: #f6faf8;
+	background-color: #e74c66;
+	cursor: pointer;
+}
+
+.primary-button {
+	background-color: #11a9ac;
+	color: #d8e1e5;
+	cursor: pointer;
+}
+
+.primary-button:hover {
+	background-color: #4abebf;
+}
+
+.page-headline {
+	margin: 10px;
+	padding: 30px 0 15px 30px;
+	background-color: #394263;
+	font-weight: normal;
+	font-size: 3em;
+	border-radius: 5px;
+}
+
+.card-wrapper {
+	display: flex;
+	justify-content: space-around;
+	width: 95%;
+	margin: 0 auto;
+	flex-flow: row wrap;
+}
+
+.stock-card {
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	margin: 1.5em 0;
+	border-radius: 5px;
+	background-color: #394263;
+}
+
+.stock-card-body {
+	margin: 0 10px;
+}
+
+.stock-card a {
+	text-decoration: none;
+	color: #d8e1e5;
+}
+
+.stock-card a:visited {
+	color: inherit;
+}
+
+.stock-card:hover {
+	box-shadow: -5px 10px 20px rgba(0,0,0,0.5);
+	color: #f6faf8;
+	transform: translate(2px, 4px);
+}
+
+.no-hover:hover {
+	box-shadow: none;
+	color: inherit;
+	transform: none;
+	cursor: auto;
+}
+
+.stock-card-headline {
+	background-color: #11a9ac;
+	padding: 15px 5px 5px 15px;
+	margin: 0;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
