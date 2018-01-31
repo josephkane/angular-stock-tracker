@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TrackedStock } from "../tracked-stock"
 import { StockService } from "../stock.service"
 
 @Component({
